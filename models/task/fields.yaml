@@ -1,0 +1,29 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    name:
+        label: Name
+        type: text
+        span: auto
+    priority:
+        label: Priority
+        type: balloon-selector
+        span: auto
+        default: 1
+    time_estimate:
+        label: Estimated Time
+        type: datepicker
+        mode: time
+        span: auto
+    cost:
+        label: Amount Cost
+        type: number
+        span: auto
+    description:
+        label: Description
+        type: textarea
+        size: large
+        span: full
+    

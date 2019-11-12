@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Booking
+
+# Model Form Field configuration
+form: $/bookrr/keeprr/models/booking/fields.yaml
+
+# Model Class name
+modelClass: Bookrr\Keeprr\Models\Booking
+
+# Default redirect location
+defaultRedirect: bookrr/keeprr/booking
+
+# Create page
+create:
+    title: Create Booking
+    redirect: bookrr/keeprr/booking/update/:id
+    redirectClose: bookrr/keeprr/booking
+
+# Update page
+update:
+    title: Edit Booking
+    redirect: bookrr/keeprr/booking
+    redirectClose: bookrr/keeprr/booking
+
+# Preview page
+preview:
+    title: Preview Booking

@@ -1,0 +1,24 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    name:
+        label: Name
+        span: full
+    # status:
+    #     label: Status
+    #     span: auto
+    #     type: balloon-selector
+    #     disabled: true
+    #     options:
+    #         0 : Pending
+    #         1 : Done
+    #         3 : Issue
+    description:
+        label: Description
+        type: textarea
+        size: small
+    task:
+        type: partial
+        path: tasks

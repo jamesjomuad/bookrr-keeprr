@@ -1,0 +1,19 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    id:
+        label: ID
+        searchable: true
+    title:
+        label: Title
+    priority:
+        label: Priority
+        type: partial
+        path: priority
+    status:
+        label: Status
+        type: partial
+        path: status
+        

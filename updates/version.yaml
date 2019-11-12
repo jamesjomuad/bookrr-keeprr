@@ -1,0 +1,25 @@
+1.0.1: First version of keeprr
+1.0.2: 
+ - 'Create extended Users table'
+ - create_users_table.php
+1.0.3: 
+ - 'Create Bookings table'
+ - create_bookings_table.php
+1.0.4:
+ - 'Seed Table'
+ - seed.php
+1.0.5:
+  - 'Create Jobs table'
+  - create_jobs_table.php
+1.0.6:
+  - 'Create Tasks table'
+  - create_tasks_table.php
+1.0.7:
+  - 'Create Job and Task Pivot table'
+  - pivot_job_task.php
+1.0.8:
+  - 'Create Work Task pivot table'
+  - pivot_work_task.php
+1.0.9:
+  - 'Create Work Table'
+  - create_works_table.php

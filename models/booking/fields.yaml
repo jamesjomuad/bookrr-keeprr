@@ -1,0 +1,80 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    email:
+        label: Email
+        type: text
+        span: auto
+    zip:
+        label: Zip
+        type: text
+        span: auto
+    phone:
+        label: Phone
+        type: text
+        span: auto
+    date_start:
+        label: Cleaning Schedule
+        type: datepicker
+        mode: date
+        span: auto
+    num_bedroom:
+        label: Number of Bedroom
+        type: dropdown
+        span: auto
+        options:
+            0: None
+            1: 1
+            2: 2
+            3: 3
+            4: 4
+            5: 5
+            6: 6
+            7: 7
+            8: 8
+            9: 9
+            10: 1
+            11: '10 Plus'
+    num_bathroom:
+        label: Number of Bathroom
+        type: dropdown
+        span: auto
+        options:
+            0: None
+            1: 1
+            2: 2
+            3: 3
+            4: 4
+            5: 5
+            6: 6
+            7: 7
+            8: 8
+            9: 9
+            10: 1
+            11: '10 Plus'
+    job:
+        label: Attach Job
+        title: Attach Job
+        nameFrom: name
+        prompt: 'Click the %s button to Attach Job'
+        list: $/bookrr/keeprr/models/job/columns.yaml
+        span: auto
+        required: 1
+        type: recordfinder
+        context:
+            - update
+            - preview
+    status:
+        label: Status
+        type: dropdown
+        span: auto
+        dependsOn: job
+        context:
+            - update
+            - preview
+    note:
+        label: Note
+        type: textarea
+        size: large

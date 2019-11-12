@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Work
+
+# Model Form Field configuration
+form: $/bookrr/keeprr/models/work/fields.yaml
+
+# Model Class name
+modelClass: Bookrr\Keeprr\Models\Work
+
+# Default redirect location
+defaultRedirect: bookrr/keeprr/work
+
+# Create page
+create:
+    title: Create Work
+    redirect: bookrr/keeprr/work/update/:id
+    redirectClose: bookrr/keeprr/work
+
+# Update page
+update:
+    title: Edit Work
+    redirect: bookrr/keeprr/work
+    redirectClose: bookrr/keeprr/work
+
+# Preview page
+preview:
+    title: Preview Work

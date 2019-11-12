@@ -1,0 +1,11 @@
+task:
+    label: Tasks    
+    deferredBinding: true
+    view:
+        list: $/bookrr/keeprr/models/task/columns.yaml
+        toolbarButtons: add|create|remove
+        showSearch: true
+    manage:
+        form: $/bookrr/keeprr/models/task/fields.yaml
+        recordsPerPage: 10
+        showSearch: true

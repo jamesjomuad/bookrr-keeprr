@@ -1,0 +1,18 @@
+
+
+
+
+<div class="control-tabs content-tabs" data-control="tab">
+    <ul class="nav nav-tabs">
+        <li class="active">  <a href="#list"><i class="icon-list"></i> Lists</a></li>
+        <li><a href="#calendar"> <i class="icon-calendar"></i> Calendar</a></li>
+    </ul>
+    <div class="tab-content" style="background: #fff;">
+        <div class="tab-pane active">
+            <?= $this->listRender() ?>
+        </div>
+        <div class="tab-pane p-a">
+            <?= $this->makePartial('calendar') ?>
+        </div>
+    </div>
+</div>

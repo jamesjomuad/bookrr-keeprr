@@ -1,0 +1,23 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    id:
+        label: ID
+        searchable: true
+    name:
+        label: Name
+        searchable: true
+    priority:
+        label: Priority
+        align: center
+        type: partial
+        path: priority
+    time_estimate:
+        label: Estimated Time
+        type: datetime
+        format: H:i
+        align: center
+    cost:
+        label: Amount Cost

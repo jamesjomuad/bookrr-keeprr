@@ -1,0 +1,50 @@
+.card{
+    border: 1px solid #dedede;
+    padding: 15px;
+    margin: 15px;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+}
+.mx-0{
+    margin-left: 0px ;
+    margin-right: 0px ;
+}
+
+.stat{
+    padding: 15px;
+    border-left: 5px solid;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+    margin: 15px 0;
+}
+.stat .l{
+    font-weight: 700;
+    font-size: large;
+}
+.stat .r{
+    float: right;
+}
+
+.stat.prime{
+    border-color: #4ece00;
+}
+.stat.second{
+    border-color: #0080ce;
+}
+.stat.third{
+    border-color: #ce7400;
+}
+.stat.fourth{
+    border-color: #1bff82;
+}
+
+.btn.low{
+    background: #00adff;
+}
+.btn.mid{
+    background: #ff9900;
+}
+.btn.high{
+    background: #ff4444;
+    color: #fff;
+}

@@ -1,0 +1,15 @@
+
+<div class="control-tabs content-tabs" data-control="tab">
+    <ul class="nav nav-tabs">
+        <li class="active"><a href="#jobs">Jobs</a></li>
+        <li><a href="#tasks">Tasks</a></li>
+    </ul>
+    <div class="tab-content" style="background: #fff;">
+        <div class="tab-pane p-a active">
+            <?= $this->listRender('jobs') ?>
+        </div>
+        <div class="tab-pane p-a">
+            <?= $this->listRender('tasks') ?>
+        </div>
+    </div>
+</div>

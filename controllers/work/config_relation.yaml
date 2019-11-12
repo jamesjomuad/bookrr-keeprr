@@ -1,0 +1,66 @@
+task:
+    label: Tasks
+    view:
+        toolbarButtons: link|unlink
+        list:
+            columns:
+                id:
+                    label: Task id
+                name:
+                    label: Name
+                pivot[status]:
+                    label: Status
+                    type: partial
+                    path: status
+                pivot[priority]:
+                    label: Priority
+                    type: partial
+                    path: priority
+                time_estimate:
+                    label: Estimated Time
+                    type: datetime
+                    format: H:i
+                    align: center
+                cost:
+                    label: Cost
+                    clickable: false
+    manage:
+        showSearch: true
+        context:
+            - update
+        list:
+            columns:
+                id:
+                    label: id
+                name:
+                    label: Name
+                priority:
+                    label: Priority
+                    type: partial
+                    path: priority
+                time_estimate:
+                    label: Estimated Time
+                    type: datetime
+                    format: H:i
+                    align: center
+                cost:
+                    label: Amount Cost
+    pivot:
+        form:
+            fields:
+                pivot[status]:
+                    label: Status
+                    span: auto
+                    type: dropdown
+                    default: 1
+                    options: getStatusOptions
+                pivot[priority]:
+                    label: Priority
+                    type: balloon-selector
+                    span: auto
+                    default: 1
+                    options: getPriorityOptions
+                pivot[note]:
+                    label: Note
+                    type: textarea
+                    size: small

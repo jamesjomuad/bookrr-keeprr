@@ -1,0 +1,34 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    id:
+        label: ID
+        searchable: true
+    number:
+        label: Booking Number
+        searchable: true
+    email:
+        label: Email
+        searchable: true
+    phone:
+        label: Phone
+        searchable: true
+    zip:
+        label: Zip
+    num_bedroom:
+        label: Number of Bedroom
+    num_bathroom:
+        label: Number of Bathroom
+    status:
+        label: Status
+    date_start:
+        label: Cleaning Schedule
+    job_name:
+        label: Job
+        sortable: false
+        relation: job
+        valueFrom: name
+        searchable: true
+        select: name

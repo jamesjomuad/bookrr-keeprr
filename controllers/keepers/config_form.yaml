@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Keeper
+
+# Model Form Field configuration
+form: $/bookrr/keeprr/models/keepers/fields.yaml
+
+# Model Class name
+modelClass: Bookrr\Keeprr\Models\Keepers
+
+# Default redirect location
+defaultRedirect: bookrr/keeprr/keepers
+
+# Create page
+create:
+    title: Create Keeper
+    redirect: bookrr/keeprr/keepers/update/:id
+    redirectClose: bookrr/keeprr/keepers
+
+# Update page
+update:
+    title: Edit Keeper
+    redirect: bookrr/keeprr/keepers
+    redirectClose: bookrr/keeprr/keepers
+
+# Preview page
+preview:
+    title: Preview Keeper

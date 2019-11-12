@@ -1,0 +1,34 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    title:
+        label: Title
+        type: text
+        span: full
+    status:
+        label: Status
+        type: dropdown
+        span: auto
+        default: 1
+    priority:
+        label: Priority
+        type: balloon-selector
+        span: auto
+        default: 1
+        options:
+            1 : None
+            2 : Low
+            3 : Mid
+            4 : High
+    notes:
+        label: notes
+        type: textarea
+        size: large
+        span: full
+    task:
+        type: partial
+        path: tasks
+        context:
+            - update

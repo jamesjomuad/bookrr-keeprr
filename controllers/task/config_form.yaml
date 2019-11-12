@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Task
+
+# Model Form Field configuration
+form: $/bookrr/keeprr/models/task/fields.yaml
+
+# Model Class name
+modelClass: Bookrr\Keeprr\Models\Task
+
+# Default redirect location
+defaultRedirect: bookrr/keeprr/jobs#tasks
+
+# Create page
+create:
+    title: Create Task
+    redirect: bookrr/keeprr/task/update/:id
+    redirectClose: bookrr/keeprr/jobs#tasks
+
+# Update page
+update:
+    title: Edit Task
+    redirect: bookrr/keeprr/jobs
+    redirectClose: bookrr/keeprr/jobs#tasks
+
+# Preview page
+preview:
+    title: Preview Task
