@@ -10,6 +10,33 @@
     <?= Form::open(['class' => 'layout']) ?>
 
         <div class="layout-row">
+            <div class="control-toolbar">
+                <div class="toolbar-item toolbar-primary">
+                    <div data-control="toolbar">
+                        <button 
+                            type="button" 
+                            class="btn btn-primary oc-icon-plus"
+                            data-handler="onWorkOrder"
+                            data-control="popup">
+                            Work Order
+                        </button>
+            
+                        <button type="button" class="btn btn-default oc-icon-copy">Copy</button>
+            
+                        <button
+                            type="button"
+                            class="btn btn-default oc-icon-trash"
+                            data-request="onDelete"
+                            data-load-indicator="Deleting Booking..."
+                            data-request-confirm="Delete this booking?">
+                            Delete
+                        </button>
+                    </div>
+                </div>
+                <div class="toolbar-item" style="width: 110px">
+                    <input placeholder="search..." type="text" name="" value="" class="form-control icon search" />
+                </div>
+            </div>
             <?= $this->formRender() ?>
         </div>
 

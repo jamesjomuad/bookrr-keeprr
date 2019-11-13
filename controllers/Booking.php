@@ -13,6 +13,8 @@ use Config;
  */
 class Booking extends Controller
 {
+    use \Bookrr\Extra\Traits\Widgets;
+
     public $implement = [
         'Backend.Behaviors.FormController',
         'Backend.Behaviors.ListController'
@@ -20,6 +22,8 @@ class Booking extends Controller
 
     public $formConfig = 'config_form.yaml';
     public $listConfig = 'config_list.yaml';
+
+    public $jobFinderWidget;
 
     public function __construct()
     {
@@ -32,6 +36,13 @@ class Booking extends Controller
         $this->addJs(Config::get('bookrr.keeprr::assetPath').'/js/fullcalendar.min.js');
 
         $this->addJs(Config::get('bookrr.keeprr::assetPath').'/js/booking.js','v1.0');
+
+        $this->jobFinderWidget = $this->FormWidget([
+            'config'    => '$/bookrr/keeprr/models/booking/fields_work.yaml',
+            'model'     => new \Bookrr\Keeprr\Models\Booking,
+            'alias'     => 'workorder',
+            'arrayName' => 'workorder'
+        ]);
     }
 
     public function listOverrideColumnValue($model, $col)
@@ -109,4 +120,12 @@ class Booking extends Controller
             $work->task()->sync($tasks);
         }
     }
+
+    public function onWorkOrder($id)
+    {
+        $this->vars['widget'] = $this->jobFinderWidget;
+
+        return $this->makePartial('work_order');
+    }
+
 }
