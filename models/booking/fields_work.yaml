@@ -4,17 +4,9 @@
 
 fields:
     job:
-        label: Attach Job
-        title: Attach Job
         nameFrom: name
         prompt: 'Click the %s button to Attach Job'
         list: $/bookrr/keeprr/models/job/columns.yaml
         span: full
         required: 1
         type: recordfinder
-
-    status:
-        label: Status
-        type: dropdown
-        span: full
-        dependsOn: job

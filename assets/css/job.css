@@ -37,14 +37,3 @@
 .stat.fourth{
     border-color: #1bff82;
 }
-
-.btn.low{
-    background: #00adff;
-}
-.btn.mid{
-    background: #ff9900;
-}
-.btn.high{
-    background: #ff4444;
-    color: #fff;
-}

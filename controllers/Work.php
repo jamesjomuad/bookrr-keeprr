@@ -31,7 +31,7 @@ class Work extends Controller
 
         BackendMenu::setContext('Bookrr.Keeprr', 'keeprr', 'work');
 
-        $this->addCss(Config::get('bookrr.keeprr::assetPath').'/css/job.css','v1.4');
+        $this->addCss(Config::get('bookrr.keeprr::assetPath').'/css/job.css','v1.5');
 
         $this->model = new \Bookrr\Keeprr\Models\Work;
     }

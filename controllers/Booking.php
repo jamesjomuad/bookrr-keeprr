@@ -5,6 +5,7 @@ use Backend\Classes\Controller;
 use Carbon\Carbon;
 use Bookrr\Keeprr\Models\Booking as Book;
 use Bookrr\Keeprr\Models\Work;
+use Bookrr\Keeprr\Models\Job;
 use Config;
 
 
@@ -103,19 +104,17 @@ class Booking extends Controller
                 'status' => 1
             ]);
 
-            $work->booking = $model;
-
             $work->save();
 
             # Set pivot field default values
             $tasks = $model->job->task
-                ->mapWithKeys(function ($value, $key) {
-                    $task = collect($value)->only(['priority','status'])->toArray();
-                    $task['status'] = 1;
-                    return [
-                        $value['id'] => $task
-                    ];
-                })->toArray();
+            ->mapWithKeys(function ($value, $key) {
+                $task = collect($value)->only(['priority','status'])->toArray();
+                $task['status'] = 1;
+                return [
+                    $value['id'] => $task
+                ];
+            })->toArray();
 
             $work->task()->sync($tasks);
         }
@@ -126,6 +125,31 @@ class Booking extends Controller
         $this->vars['widget'] = $this->jobFinderWidget;
 
         return $this->makePartial('work_order');
+    }
+
+    public function onAddWorkOrder($id)
+    {
+        $book = Book::find($id);
+
+        $work = new Work([
+            'title' => 'Work order from booking ' . $book->number,
+            'priority' => 1,
+            'status' => 1
+        ]);
+
+        $work->save();
+
+        # Set pivot field default values
+        $tasks = Job::find(input('workorder.job'))->task
+        ->mapWithKeys(function ($value, $key) {
+            $task = collect($value)->only(['priority','status'])->toArray();
+            $task['status'] = 1;
+            return [
+                $value['id'] => $task
+            ];
+        })->toArray();
+    
+        return $work->task()->sync($tasks);
     }
 
 }
