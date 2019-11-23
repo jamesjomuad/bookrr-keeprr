@@ -10,12 +10,10 @@ task:
                     label: Name
                 pivot[status]:
                     label: Status
-                    type: partial
-                    path: status
+                    type: tag
                 pivot[priority]:
                     label: Priority
-                    type: partial
-                    path: priority
+                    type: tag
                 time_estimate:
                     label: Estimated Time
                     type: datetime
