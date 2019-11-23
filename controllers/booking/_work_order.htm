@@ -1,0 +1,29 @@
+<?= Form::open(['id' => 'updateForm']) ?>
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="popup">×</button>
+        <h4 class="modal-title">Create Work Order</h4>
+    </div>
+    <div class="modal-body">
+        <?= $widget->render() ?>
+    </div>
+    <div class="modal-footer">
+        <button
+            type="submit"
+            data-request="onAddWorkOrder"
+            onclick="$(this).data('request-data', {
+                redirect: 0
+            })"
+            data-hotkey="ctrl+s, cmd+s"
+            data-popup-load-indicator
+            class="btn btn-primary">
+            <u>S</u>ave
+        </button>
+
+        <button
+            type="button"
+            class="btn btn-default"
+            data-dismiss="popup">
+            <?= e(trans('backend::lang.form.cancel')) ?>
+        </button>
+    </div>
+<?= Form::close() ?>

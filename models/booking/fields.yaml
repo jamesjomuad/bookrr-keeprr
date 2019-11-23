@@ -3,6 +3,11 @@
 # ===================================
 
 fields:
+    number:
+        label: Booking Number
+        type: text
+        span: full
+        disabled: true 
     email:
         label: Email
         type: text

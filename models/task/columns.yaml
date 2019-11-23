@@ -12,8 +12,7 @@ columns:
     priority:
         label: Priority
         align: center
-        type: partial
-        path: priority
+        type: tag
     time_estimate:
         label: Estimated Time
         type: datetime

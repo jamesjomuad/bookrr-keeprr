@@ -10,10 +10,8 @@ columns:
         label: Title
     priority:
         label: Priority
-        type: partial
-        path: priority
+        type: tag
     status:
         label: Status
-        type: partial
-        path: status
+        type: tag
         

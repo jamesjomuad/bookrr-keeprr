@@ -100,11 +100,11 @@ class Booking extends Model
     #
     #   Events
     #
-    public function beforeCreate()
-    {
-        $this->status = $this->statusOptions['pending'];
-        $this->number = '#' . str_pad(uniqid(), 8, "0", STR_PAD_LEFT);
-    }
+    // public function beforeCreate()
+    // {
+    //     $this->status = $this->statusOptions['pending'];
+    //     $this->number = '#' . str_pad(uniqid(), 8, "0", STR_PAD_LEFT);
+    // }
 
     public function filterFields($fields, $context = null)
     {
@@ -113,4 +113,20 @@ class Booking extends Model
         }
     }
 
+    #
+    #   Accessor
+    #
+    public function getNumberAttribute($value)
+    {
+        if(!$value)
+        return '#' . hexdec(uniqid());
+        return $value;
+    }
+
+    public function getStatusAttribute($value)
+    {
+        if(!$value)
+        return $this->statusOptions['pending'];
+        return $value;
+    }
 }

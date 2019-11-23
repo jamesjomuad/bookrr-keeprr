@@ -1,0 +1,12 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    job:
+        nameFrom: name
+        prompt: 'Click the %s button to Attach Job'
+        list: $/bookrr/keeprr/models/job/columns.yaml
+        span: full
+        required: 1
+        type: recordfinder
